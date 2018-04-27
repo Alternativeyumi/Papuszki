@@ -1,0 +1,15 @@
+h1, h2 {
+	color: grey;
+	background-color: white;
+	font-size: 170%;
+	font: times new roman;
+}
+
+p {
+	color: grey;
+	background-color: white;
+	font-size: 100%;
+	font: times new roman;
+	padding-left: 10px
+	padding-right: 10px;
+}

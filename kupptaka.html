@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="PL">
+<head>
+	<title>Kup papuszkę</title>
+</head>
+<body>
+		<nav>
+		<ul>
+			<li><p><a href="file:///C:/dev/papuszki/index.html">
+			Strona główna
+			</a></p>
+			</li>
+			<li><p><a href="file:///C:/dev/papuszki/rozmiarypapug.html">
+			Rozmiary papug
+			</a></p></li>
+			<li><p><a href="file:///C:/dev/papuszki/kupptaka.html">
+			Kup papuszkę
+			</a></p></li>
+		</ul>
+	</nav>
+
+	<form action="http://schoweknapapugi.com/galeria.php">
+		<p>Wybierz kolor papugi:
+			<br>
+			<input type="radio" name="color" value="white"/>
+			Biała
+			<input type="radio" name="color" value="green"/>
+			Zielona
+			<input type="radio" name="color" value="yellow"/>
+			Żółta
+			<input type="radio" name="color" value="blue"/>
+			Niebieska
+			<input type="radio" name="color" value="multicolor"/>
+			Wielobarwna
+		</p>
+	</form>
+	<form action="http://schoweknapapugi.com/galeria.php">
+		<p>Wybierz długość papugi (od 15cm do 70cm):<br>
+			<input type="number" name="quantity" min="15" max="70" required="required" />
+		</p>
+	</form>
+	<label>
+		Wiek (przy czym 0 oznacza papugę młodszą, niż rok):<br>
+		<input type="number" name="quantity" min="0" max="10" required="required"/><br>
+		Płeć: <input id="female" type="radio" name="gender" value="f">
+		<label for="female">Samiczka</label>
+		<input id="male" type="radio" name="gender" value="m">
+		<label for="male">Samczyk</label>
+	</label>
+	<form action="http://schoweknapapugi.com/galeria.php">
+		<p>Czego oczekujesz od papuszki? (Możesz zaznaczyć więcej, niż jedną opcję, naciskając klawisz Ctrl):</p>
+		<select name="feature" multiple="multiple" size="6">
+			<option value="singing">Śpiewu</option>
+			<option value="copying">Naśladowania dźwięków</option>
+			<option value="taking">Mówienia</option>
+			<option value="jumping">Skakanie</option>
+			<option value="mildness">Łagodności</option>
+			<option value="independence">Niezależności</option>
+		</select><br><br>
+	<form action="http://schoweknapapugi.com/galeria.php">
+		<input type="submit" value="Prześlij"/>	
+	</form>
+
+
+
+</body>
+</html>
