@@ -2,14 +2,45 @@ h1, h2 {
 	color: grey;
 	background-color: white;
 	font-size: 170%;
-	font: times new roman;
+	font-family: times new roman;
 }
 
-p {
+div {
 	color: grey;
 	background-color: white;
 	font-size: 100%;
-	font: times new roman;
-	padding-left: 10px
-	padding-right: 10px;
+	font-family: times new roman;
+}
+
+a {
+	outline: 2px lightgrey;
+	outline-style: double;
+	text-decoration: none;
+	display: inline-block;
+	width: 20%;
+	margin-right: 1%;
+	text-align: center;
+	line-height: 3;
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: darkblue;
+	text-decoration: none;
+}
+
+.youtube {
+	color: blue;
+	font-weight: bold;
+}
+
+img {
+	width: 30%;
+	height: auto;
 }

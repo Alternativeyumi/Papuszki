@@ -2,66 +2,85 @@
 <html lang="PL">
 <head>
 	<title>Kup papuszkę</title>
+
 </head>
 <body>
-		<nav>
-		<ul>
-			<li><p><a href="file:///C:/dev/papuszki/index.html">
-			Strona główna
-			</a></p>
-			</li>
-			<li><p><a href="file:///C:/dev/papuszki/rozmiarypapug.html">
-			Rozmiary papug
-			</a></p></li>
-			<li><p><a href="file:///C:/dev/papuszki/kupptaka.html">
-			Kup papuszkę
-			</a></p></li>
-		</ul>
+	<nav>
+		<a href="file:///C:/dev/papuszki/index.html">Strona główna</a>
+		<a href="file:///C:/dev/papuszki/rozmiarypapug.html">Rozmiary papug</a>
+		<a href="file:///C:/dev/papuszki/gatunkipapug.html">Gatunki papug</a>
 	</nav>
 
-	<form action="http://schoweknapapugi.com/galeria.php">
-		<p>Wybierz kolor papugi:
-			<br>
-			<input type="radio" name="color" value="white"/>
-			Biała
-			<input type="radio" name="color" value="green"/>
-			Zielona
-			<input type="radio" name="color" value="yellow"/>
-			Żółta
-			<input type="radio" name="color" value="blue"/>
-			Niebieska
-			<input type="radio" name="color" value="multicolor"/>
-			Wielobarwna
-		</p>
-	</form>
-	<form action="http://schoweknapapugi.com/galeria.php">
-		<p>Wybierz długość papugi (od 15cm do 70cm):<br>
-			<input type="number" name="quantity" min="15" max="70" required="required" />
-		</p>
-	</form>
-	<label>
-		Wiek (przy czym 0 oznacza papugę młodszą, niż rok):<br>
-		<input type="number" name="quantity" min="0" max="10" required="required"/><br>
-		Płeć: <input id="female" type="radio" name="gender" value="f">
-		<label for="female">Samiczka</label>
-		<input id="male" type="radio" name="gender" value="m">
-		<label for="male">Samczyk</label>
-	</label>
-	<form action="http://schoweknapapugi.com/galeria.php">
-		<p>Czego oczekujesz od papuszki? (Możesz zaznaczyć więcej, niż jedną opcję, naciskając klawisz Ctrl):</p>
-		<select name="feature" multiple="multiple" size="6">
-			<option value="singing">Śpiewu</option>
-			<option value="copying">Naśladowania dźwięków</option>
-			<option value="taking">Mówienia</option>
-			<option value="jumping">Skakanie</option>
-			<option value="mildness">Łagodności</option>
-			<option value="independence">Niezależności</option>
-		</select><br><br>
-	<form action="http://schoweknapapugi.com/galeria.php">
-		<input type="submit" value="Prześlij"/>	
-	</form>
+	<form action="/superptak" method="post">
+		<fieldset>
+			<legend>Ptak</legend>
+			<div>
+				<label for="name">Imię papugi:</label>
+				<input type="text" id="name" name="birb_name" value="Kiwi">
+			</div>
+			<div>
+				<label for="colors">Wybierz kolor papugi:</label>
+				<div id="colors">
+					<input type="radio" id="color_white" name="color" value="white"/>
+					<label for="color_white">Biała</label>
+					<input type="radio" id="color_green" name="color" value="green"/>
+					<label for="color_green">Zielona</label>
+					<input type="radio" id="color_yellow" name="color" value="yellow"/>
+					<label for="color_yellow">Żółta</label>
+					<input type="radio" id="color_blue" name="color" value="blue"/>
+					<label for="color_blue">Niebieska</label>
+					<input type="radio" id="color_multicolor" name="color" value="multicolor"/>
+					<label for="color_multicolor">Wielobarwna</label>
+				</div>
+			</div>
+
+			<div>Wybierz długość papugi (od 15cm do 70cm):</br>
+				<input type="number" name="quantity" min="15" max="70" required="required" />
+			</div>
+
+			<div>
+			<label>
+				Wiek (przy czym 0 oznacza papugę młodszą, niż rok):<br>
+				<input type="number" name="quantity" min="0" max="10" required="required"/><br>
+				Płeć: <input id="female" type="radio" name="gender" value="f">
+				<label for="female">Samiczka</label>
+				<input id="male" type="radio" name="gender" value="m">
+				<label for="male">Samczyk</label>
+			</label>
+			</div>
+		
+			<div>Czego oczekujesz od papuszki? (Możesz zaznaczyć więcej, niż jedną opcję, naciskając klawisz Ctrl):</br>
+			<select name="feature" multiple="multiple">
+				<option value="singing">Śpiewu</option>
+				<option value="copying">Naśladowania dźwięków</option>
+				<option value="taking">Mówienia</option>
+				<option value="jumping">Skakanie</option>
+				<option value="mildness">Łagodności</option>
+				<option value="independence">Niezależności</option>
+			</select>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Zamawiający</legend>
+			<div>
+				<label for="user_name">Imię właściciela:</label>
+				<input type="text" id="user_name" name="user_name">
+			</div>
+			<div>
+				<label for="mail">E-mail:</label>
+				<input type="email" id="mail" name="user_mail">
+			</div>
+			<div>
+				<label for="msg">Message:</label>
+				<textarea id="msg" name="user_message"></textarea>
+			</div>
+		</fieldset>
+		<div class="button">
+			<button type="submit">Zamów ptaka</button>
+			<button type="reset">Wyczyść formularz</button>
+		</div>
 
 
-
+	</form>
 </body>
 </html>
